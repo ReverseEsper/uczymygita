@@ -7,32 +7,19 @@ on:
 
 jobs:
   deploy:
+    name: Upload to Amazon S3
     runs-on: ubuntu-latest
+    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: tworzy katalogi
-    #jakims cudem mimio ich stworzenia pokazuje ze nie istniją
-      run:
-        mkdir ~/.aws
-        mkdir ~/.aws/credentials
-
-    - name: Set up AWS CLI
-      env:
-         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      
-      
-      run:  
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Configure Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         
-        echo "[default]" > ~/.aws/credentials
-        echo "aws_access_key_id=${AWS_ACCESS_KEY_ID}" >> ~/.aws/credentials
-        echo "aws_secret_access_key=${AWS_SECRET_ACCESS_KEY}" >> ~/.aws/credentials
-
-    - name: Deploy to S3
+    - name: Test if it works
       run: |
-        aws s3 sync site/ s3://miecraft --delete
-      env:
-        AWS_CONFIG_FILE: ${{ github.workspace }}/.aws/credentials
+        aws s3 ls s3://miecraft
