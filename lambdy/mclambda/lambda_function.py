@@ -15,6 +15,10 @@ def lambda_handler(event, context):
         if instance_status['Reservations'][0]['Instances'][0]['State']['Name'] == 'stopped':
             ec2.start_instances(InstanceIds=[instance_id])
             print('Instancja EC2 włączona pomyślnie:', instance_id)
+        elif instance_status['Reservations'][0]['Instances'][0]['State']['Name'] == 'stopping':
+            print('Maszyna w trakcie zatrzymywania:', instance_id)
+        elif instance_status['Reservations'][0]['Instances'][0]['State']['Name'] == 'starting':
+            print('maszyna sie startuje', instance_id)
         else:
             print('Instancja EC2 jest już uruchomiona:', instance_id)
 
