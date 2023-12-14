@@ -23,4 +23,4 @@ jobs:
         
     - name: Test if it works
       run: |
-        aws s3 sync strona s3://miecraft/site
+        aws s3 sync strona s3://miecraft/site/
