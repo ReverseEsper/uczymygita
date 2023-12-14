@@ -23,4 +23,4 @@ jobs:
         
     - name: Test if it works
       run: |
-        aws s3 ls s3://miecraft
+        aws s3 sync strona s3://miecraft/site
