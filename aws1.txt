@@ -1,0 +1,197 @@
+Your company would like to begin using Auto Scaling to add servers when CPU utilization reaches a certain threshold (e.g., 70%). Which service can you use to trigger actions when CPU utilization crosses the threshold?
+
+1.Simple Notification Service
+
+2.EC2 logs
+
+3.CloudWatch Alarms - Dobra odp
+
+A CloudWatch alarm can be set up to monitor CPU utilization and trigger further action. Further action could be an Auto Scaling group adding another EC2 instance and/or using SNS to notify team members of the occurrence.
+
+4.Elastic Load Balancing
+
+Elastic load balancers are used to balance traffic between EC2 instances, typically in an Auto Scaling group.
+
+
+
+When configuring an Application Load Balancer (ALB) to ensure high availability, which of the following steps is recommended by AWS?
+
+1.Set up cross-Region Load Balancing
+
+Load balancing can be set up to serve traffic across multiple Availability Zones (not Multi-Region).
+
+2.Configure the load balancer to distribute incoming traffic across your registered targets in multiple Availability Zones - Dobra odp
+
+AWS recommends enabling multiple Availability Zones for all load balancers. With an Application Load Balancer, however, it is a requirement that you enable at least two or more Availability Zones. This configuration helps ensure that the load balancer can continue to route traffic. If one Availability Zone becomes unavailable or has no healthy targets, the load balancer can route traffic to the healthy targets in another Availability Zone.
+
+AWS Documentation: Availability Zones and Load Balancer Nodes.
+
+3.Set up multiple edge locations for your load balancer
+
+4.Set up more than 1 ALB
+
+
+
+
+What pillar of the Well-Architected Framework would include the use of information gathered through a workload process evaluation to drive adoption of new services or resources when they become available?
+
+1.Security
+
+2.Performance Efficiency - Dobra odp
+
+This Performance Efficiency pillar focuses on the effective use of resources to meet demand. In this pillar, you would use the information gathered through the evaluation process to actively drive adoption of new services or resources. You would also define a process to improve workload performance, and you would need to stay up-to-date on new resources and services.
+
+3.Operational Excellence
+
+The Operational Excellence pillar focus on building applications that effectively support your workloads.
+
+4.Reliability
+
+
+
+
+
+Under the shared responsibility model, which task is AWS' responsibility when managing AWS Lambda functions?
+
+1.Managing the versions of Lambda function code - Dobra odp
+
+You are responsible for managing the versions of your application code.
+
+2.Ensuring the Lambda function has the proper IAM permissions to access other services and resources
+
+3.Upgrading function code when new versions of programming languages are released
+
+4.Managing the Lambda runtime environment
+
+AWS is responsible for the Lambda runtime environment.
+
+
+
+
+A customer has an on-premises 5-gigabyte Oracle database that needs to be migrated to AWS and converted to Aurora. The customer requires minimal downtime to the database. Which service is the best option for migration and conversion?
+
+1.Snowmobile
+
+2.Database Migration Service - Dobra odp
+
+DMS supports homogeneous migrations like Oracle to Oracle and heterogeneous migrations like Oracle to Aurora, with minimal downtime.
+
+3.DataSync
+
+While DataSync provides online data transfer from on-premises to services like S3 or EFS, DataSync doesn't convert from one database engine to another.
+
+4.Direct Connect
+
+
+
+Which of the following allows you to make entire buckets (like 1 hosting an S3 website) public?
+
+1.Access control lists
+
+2.Bucket policies - Dobra odp
+
+Bucket policies allow you to control access to entire buckets, whereas access control lists let you control access to individual objects within an S3 bucket.
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html
+
+3.Access policies
+
+In relation to S3, bucket control lists and access policies do not exist as configuration items.
+
+4.Bucket control lists
+
+
+
+
+Where would you find the AWS Attestation of Compliance Documentation for PCI DSS?
+
+1.AWS Artifact - Dobra odp
+
+AWS Artifact is your go-to, central resource for compliance-related information that matters to you. It provides on-demand access to AWS' security and compliance reports and select online agreements. AWS Support's site provides general information about compliance, but it does not hold the secure reports or certificates. AWS IAM is used to control security within your AWS Account. Amazon Macie is a data security classification service. https://aws.amazon.com/artifact/
+
+2. AWS Support
+
+AWS Support does not offer on-demand access to AWS security and compliance reports.
+
+3.AWS Identity and Access Management
+
+4.Amazon Macie
+
+
+
+A company is considering migrating its applications to AWS. Which costs should the company consider when comparing its on-premises total cost of ownership (TCO) to the TCO when running on AWS?
+
+1.Software license costs - Dobra odp
+
+The company should consider the number of licenses and the cost of the licenses.
+
+2.Hardware and infrastructure - Dobra odp
+
+The company should consider the cost of the hardware, like physical servers.
+
+3.Help desk support costs
+
+4.Data center cooling, power, and space requirements - Dobra odp
+
+The company should consider how much it costs to power its data center.
+
+5.Software development
+
+The company will still be responsible for custom software development after they migrate to the cloud.
+
+
+
+How can a customer with the Enterprise Support plan get help with billing and account questions?
+
+AWS Online Tech Talks
+
+1.Contact the Support Concierge team. - Dobra odp
+
+The Concierge agent is the primary point of contact for billing or account inquiries.
+
+
+2.Use the AWS Support API to programmatically open a case with AWS Support. - Dobra odp
+
+Customers on the Enterprise Support plan have access to the AWS Support API to create, manage, and close support cases.
+
+3.AWS Community Forums
+
+4.Technical Account Manager (TAM)
+
+While customers on the Enterprise Support plan have access to TAMs, TAMs typically provide proactive best-practice guidance and assistance with architecting, developing, and running AWS solutions.
+
+
+
+
+
+A company would like someone to help them coordinate access to AWS subject matter experts when they need help. Which support plan do they need to have?
+
+1.Business
+
+Business Support does not provide access to a Technical Account Manager (TAM) who helps coordinate access to subject matter experts among other things.
+
+2.Enterprise - Dobra odp
+
+Enterprise Support provides access to a Technical Account Manager (TAM) who helps coordinate access to subject matter experts among other things.
+
+3.Basic Support
+
+4.Developer Support
+
+
+
+A customer is on the Enterprise Support plan, and they've reported a business-critical system down support case. What is the guaranteed response time from AWS Support?
+
+1.Less than 24 hours
+
+The response time for a business-critical system down case is less than 15 minutes.
+
+2.Less than 1 hour
+
+3.Less than 5 minutes
+
+4.Less than 15 minutes - Dobra odp
+
+The response time for a business-critical system down case is less than 15 minutes.
+
+
