@@ -25,4 +25,14 @@ jobs:
       run: |
         aws s3 sync strona s3://miecraft/
 
+    - name: Zip Lambda function
+      run: |
+          cd lambdy\mclambda 
+          zip -r function.zip . 
+  
+    - name: Update Lambda function
+      run: |
+        aws lambda update-function-code --function-name lambda_function.py --zip-file s3://miecraft/function.zip
+
+
         
