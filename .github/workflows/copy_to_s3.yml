@@ -32,6 +32,10 @@ jobs:
           cd mclambda 
           zip -r function.zip . 
           aws lambda update-function-code --function-name mclambda --zip-file fileb://function.zip
+          cd ..
+          cd ma-mambda-stawp 
+          zip -r function.zip . 
+          aws lambda update-function-code --function-name ma-mambda-stawp --zip-file fileb://function.zip
 
 
         
