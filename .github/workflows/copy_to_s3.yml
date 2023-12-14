@@ -28,7 +28,6 @@ jobs:
     - name: Zip Lambda function
       run: |
           ls -la
-          cd 
           cd lambdy
           cd mclambda 
           zip -r function.zip . 
