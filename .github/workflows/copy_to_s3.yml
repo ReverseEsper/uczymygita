@@ -13,14 +13,20 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up AWS CLI
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-      run:  
+    - name: tworzy katalogi
+    #jakims cudem mimio ich stworzenia pokazuje ze nie istniją
+      run:
         mkdir ~/.aws
         mkdir ~/.aws/credentials
+
+    - name: Set up AWS CLI
+      env:
+         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
+      
+      run:  
+        
         echo "[default]" > ~/.aws/credentials
         echo "aws_access_key_id=${AWS_ACCESS_KEY_ID}" >> ~/.aws/credentials
         echo "aws_secret_access_key=${AWS_SECRET_ACCESS_KEY}" >> ~/.aws/credentials
