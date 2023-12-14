@@ -1,0 +1,428 @@
+Which deployment types offers the advantages of cloud computing?
+
+Hybrid cloud - dobrze
+
+A hybrid cloud is a combination of public and private clouds.
+
+Private cloud 
+
+Deploying resources on-premises, using virtualization and resource management tools, is sometimes called “private cloud”. On-premises deployment does not provide many of the benefits of cloud computing but is sometimes sought for its ability to provide dedicated resources.
+
+On-premises cloud
+
+Public cloud - dobrze
+
+Public cloud (offered by AWS) provides advantages of cloud computing.
+
+
+
+
+Which service allows you to connect a private cloud to a public cloud?
+
+Route 53
+
+Route 53 is a DNS service that routes users to applications.
+
+CodeDeploy
+
+Direct Connect dobrze
+
+Direct Connect is a dedicated physical network connection from your on-premises data center to AWS.
+
+Server Migration Service (SMS)
+
+
+
+
+Which of the following best describes the ability to scale computing resources out or in easily, while only paying for the resources used?
+
+Fault tolerance
+
+Elasticity dobrze
+
+Elasticity describes the ability to scale computing resources out or in easily, while only paying for the resources used.
+
+Scalability
+
+Scalability provides consistent performance as a system handles growing workload requirements.
+
+
+High availability
+
+
+
+
+
+Which of the following does Amazon ensure will happen when paying for AWS on an as-needed basis?
+
+Redirecting focus to innovation and invention dobrze
+
+Amazon provides certain benefits when you pay for services on an as-needed basis for your business, so you can spend more time innovating and inventing. https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf
+
+
+Reducing procurement complexity dobrze 
+
+Amazon provides certain benefits when you pay for services on an as-needed basis for your business. You can spend more time innovating and inventing, which consequently reduces the complexity of procurement. https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf
+
+
+Enabling the full elasticity of business operations dobrze
+
+Amazon provides certain benefits when you pay for services on an as-needed basis for your business. You can spend more time innovating and inventing, which consequently enables your business to be fully elastic. https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf
+
+Spending less money in the long term
+
+Organizations do not necessarily spend less money in the long term; however, they are able to spread out costs over time.
+
+Spending more money in the long term
+
+
+
+
+
+
+
+
+
+
+
+Which of the following are examples of programmatic access?
+
+Application code dobrze
+
+AWS services can be accessed from application code using SDKs and programmatic calls.
+
+Command Line Interface (CLI) dobrze
+
+The CLI allows you to manage AWS services from a terminal session on your machine.
+
+
+Software Development Kits (SDKs) dobrze 
+
+SDKs allow you to access AWS services from popular programming languages like Java, Python, C#, and many more.
+
+
+AWS Management Console
+
+The AWS Management Console allows you to access your AWS account and manage applications running in your account from a web browser.
+  
+
+
+
+
+
+
+
+
+
+You have recently started using AWS and now need to launch a large number of instances in your VPC. You learn that this number exceeds the service limits for instances in a VPC. What can you do?
+
+Upgrade your support plan to increase this service limit.
+
+Use Auto Scaling and the service limit can be exceeded.
+
+Contact AWS and request a service limit increase. dobrze
+
+Use the Limits page in the Amazon EC2 console to request an increase in the limits for resources provided by Amazon EC2 or Amazon VPC on a per-Region basis.
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html
+
+There is nothing that can be done. Redesign based on a smaller number of instances.
+
+You can request a service limit increase by contacting AWS.
+
+
+
+
+
+
+
+Network patching dobrze 
+
+Network patching is one of AWS's responsibilities, as it is connected to the infrastructure AWS handles.
+
+
+Disk disposal dobrze
+
+Disk disposal is one of AWS's responsibilities, as it is connected to the infrastructure AWS handles.
+
+User password rules
+
+All passwords are the responsibility of the customer, as they are in charge of their information.
+
+
+Physically securing compute resources dobrze
+
+AWS is in charge of physically securing compute resources, as it is part of the infrastructure that runs all of the services offered in the AWS cloud.
+
+
+Configure security groups
+
+
+
+
+
+
+How are permissions assigned to an IAM group?
+
+Security group
+
+A security group is a virtual firewall for an EC2 instance.
+
+
+Collection
+
+Policies dobrze 
+
+Access is assigned using policies and roles.
+
+
+Roles dobrze
+
+Access is assigned using policies and roles.
+
+
+
+
+
+You are using your corporate directory to grant your users access to AWS services. What is this called?
+
+Multi-Factor Authentication
+
+User group access
+
+User group access is used to define which resources a user is able to access once they have access, not the method by which they gain that access.
+
+
+Role-based access
+
+Federated access dobrze
+
+Federated access is when you use an external directory, such as your corporate one, to grant users in that directory access to AWS resources. https://aws.amazon.com/identity/federation/
+
+
+
+
+
+
+
+
+How would a customer create a virtual firewall for an EC2 instance?
+
+With AWS Shield
+
+With a security group dobrze
+
+Security groups act as virtual firewalls for EC2 instances.
+
+With a web application firewall
+
+A web application firewall (WAF) helps protect your web applications against common web attacks.
+
+
+With an IAM group
+
+
+
+
+
+
+Which following statement is true of newly created security groups with their default rules?
+
+New security groups allow both incoming and outbound traffic.
+
+New security groups block outbound traffic and allow all incoming traffic.
+
+New security groups allow only outbound traffic and block all incoming traffic. dobrze
+
+By default, new security groups start with only an outbound rule to allow all traffic to leave the instances. You must add rules to enable any inbound traffic. https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html
+
+New security groups block both incoming and outbound traffic.
+
+By default, new security groups start with only an outbound rule to allow all traffic to leave the instances. You must add rules to enable any inbound traffic.
+
+
+
+
+
+
+
+
+
+
+
+
+Which of the following statements are true of Amazon Aurora?
+
+You can use the AWS Management Console, AWS CLI commands, and API operations to handle routine database tasks. dobrze
+
+You can handle routine database tasks on it using either the AWS Management Console, AWS CLI commands, or API operations. Reference: What Is Amazon Aurora?
+
+It can deliver up to three times the throughput of MySQL.
+
+Aurora delivers up to five times the throughput of MySQL, not three times.
+
+
+It is part of the Amazon DynamoDB service.
+
+It is compatible with the MySQL and PostgreSQL database engines. dobrze 
+
+Amazon Aurora is compatible with MySQL and PostgreSQL. Reference: What Is Amazon Aurora?
+
+
+
+
+
+
+ElastiCache is an example of what type of AWS service?
+
+Analytics
+
+Compute
+
+Storage
+
+ElastiCache is not a Storage service.
+
+
+Database dobrze
+
+ElastiCache is an in-memory cache service used to improve database performance. This means that it saves your most common queries for quicker data retrieval rather than retrieving directly from your database. As a result, it is classified as an AWS Database service. AWS Documentation Amazon ElastiCache
+
+
+
+
+
+
+
+You've been tasked with assessing your AWS infrastructure in terms of cost optimization. Which of the following AWS services would help with this task?
+
+Trusted Advisor dobrze
+
+AWS Trusted Advisor is an online tool that provides you with real-time guidance to help you provision your resources following AWS best practices. https://aws.amazon.com/premiumsupport/trustedadvisor/
+
+CloudTrail
+
+AWS Personal Health Dashboard
+
+Personal Health Dashboard provides alerts and guidance for AWS events that might affect your resources and applications.
+
+
+AWS Systems Manager
+
+
+
+
+
+
+
+
+Which of the following statements are true of Amazon Redshift?
+
+It is used for transactional systems.
+
+Redshift is not recommended for transactional systems.
+
+
+It stores unstructured data.
+
+It is designed for storing petabytes of data. dobrze 
+
+Amazon Redshift is designed to scale up to petabytes of structured data.
+
+Reference: What Is Amazon Redshift?
+
+It is a data warehouse service. dobrze
+
+Amazon Redshift is AWS’s data warehouse service. 
+Reference: What Is Amazon Redshift?
+
+
+
+
+
+
+
+Which of the following statements is true of AWS CloudTrail?
+
+Log files are encrypted dobrze
+
+By default, CloudTrail event log files are encrypted using Amazon S3 server-side encryption. How CloudTrail Works
+
+
+When you create an AWS account, you will have to manually enable CloudTrail.
+
+CloudTrail is actually enabled automatically when you create an AWS account.
+
+
+With CloudTrail, you can create a trail that either applies to one Region or to all Regions. dobrze
+
+This is true. You can create a trail that applies to one or all Regions. How CloudTrail Works
+
+CloudTrail delivers log files within 15 minutes of account activity. dobrze
+
+This is true. CloudTrail delivers events within 15 minutes. How CloudTrail Works
+
+
+
+
+
+
+
+Which of the following are AWS Security, Identity, and Compliance services?
+
+AWS Security Hub dobrze 
+
+AWS Security Hub is part of the Security, Identity, and Compliance services. It provides you with a comprehensive view of your security state within AWS and your compliance with security standards and best practices.
+
+AWS Documentation: AWS Security Hub FAQs.
+
+AWS Trusted Advisor
+
+AWS Secrets Manager dobrze 
+
+AWS Secrets Manager is part of the Security, Identity, and Compliance services. It is a secrets management service that helps you protect access to your applications, services, and IT resources.
+
+AWS Documentation: AWS Secrets Manager FAQs.
+
+
+AWS Key Management Service (KMS) dobrze 
+
+AWS Key Management Service is part of the Security, Identity, and Compliance services. It is a managed service that enables you to easily create and control the keys used for cryptographic operations.
+
+AWS Documentation: AWS Key Management Service FAQs.
+
+
+AWS Control Tower
+
+AWS Control Tower is part of the Management and Governance services. AWS Control Tower provides a single location to easily set up your new well-architected multi-account environment and govern your AWS workloads with rules for security, operations, and internal compliance.
+
+AWS Documentation: AWS Control Tower FAQs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
