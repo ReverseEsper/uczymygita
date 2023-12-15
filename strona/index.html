@@ -1,18 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EC2 Starter</title>
+    <title>Obsługa Instancji EC2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-image: linear-gradient(to right, #6dd5ed, #2193b0); /* Ładne tło gradientowe */
+            padding: 40px;
+            color: white;
+        }
+
+        .ec2-button {
+            padding: 20px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 20px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .start-button {
+            background-color: #4CAF50;
+        }
+
+        .start-button:hover {
+            background-color: #45a049;
+        }
+
+        .stop-button {
+            background-color: #f44336;
+        }
+
+        .stop-button:hover {
+            background-color: #da190b;
+        }
+
+        .smiley {
+            font-size: 80px;
+            margin-top: 40px;
+        }
+
+        .gif-container {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>EC2 Starter</h1>
-    <button id="startEc2Button">Start EC2 Instance</button>
-    <button id="stopEc2Button">Stop EC2 Instance</button>
-    
+    <button id="startEc2Button" class="ec2-button start-button">Uruchom Instancję EC2</button>
+    <button id="stopEc2Button" class="ec2-button stop-button">Zatrzymaj Instancję EC2</button>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="script.js"></script>
+    <div class="smiley">😊</div>
+
+    <!-- Kontener na GIF -->
+    <div class="tenor-gif-embed" data-postid="1243269066573718874" data-share-method="host" data-aspect-ratio="1.60645" data-width="100%">
+	<a href="https://tenor.com/view/chipi-chipi-chapa-chapa-gif-1243269066573718874">Chipi Chipi Chapa Chapa GIF</a>from 
+		<a href="https://tenor.com/search/chipi+chipi+chapa+chapa-gifs">Chipi Chipi Chapa Chapa GIFs</a>
+			</div> 
+	<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#startEc2Button").on("click", function () {
+                sendEc2Request("https://68naws0d35.execute-api.eu-central-1.amazonaws.com/scenajakas/mclambda", "Instancja EC2 uruchomiona pomyślnie!");
+            });
+
+            $("#stopEc2Button").on("click", function () {
+                sendEc2Request("https://68naws0d35.execute-api.eu-central-1.amazonaws.com/scenajakas/mclambastop", "Instancja EC2 zatrzymana pomyślnie!");
+            });
+
+            function sendEc2Request(url, successMessage) {
+                $.ajax({
+                    url: url,
+                    method: "GET",
+                    success: function (data) {
+                        alert(successMessage);
+                    },
+                    error: function (error) {
+                        alert("Wystąpił błąd podczas wykonywania operacji.");
+                        console.error(error);
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
